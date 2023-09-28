@@ -1,0 +1,17 @@
+.container {
+    @apply w-full items-start justify-start overflow-x-hidden overflow-y-hidden;
+}
+.wrapper {
+    @apply relative mx-auto flex flex-col max-w-[1160px];
+  }
+  .header {
+    font-weight: 900;
+    @apply text-3xl lg:text-5xl my-3 max-w-[700px] text-center mx-auto font-sfProTextBold leading-tight;
+  }
+  .paragraph {
+    font-weight: 400;
+    @apply text-sm lg:text-base my-3 max-w-[700px] text-center mx-auto font-sfProTextRegular text-[#656262] leading-tight; 
+  }
+  .button_container {
+    @apply items-center mx-auto flex gap-5 my-5 font-proximaNovaSemibold text-black; 
+  }

@@ -54,18 +54,20 @@
 }
 body {
   overflow-x: hidden;
-  background: #000000;
+  background: #fef1cf;
+  margin: 0 auto;
+  position: relative;
 }
 
 img {
   pointer-events: none;
 }
 
-.base-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  position: relative;
-}
+// .base-container {
+//   max-width: 1440px;
+//   margin: 0 auto;
+//   position: relative;
+// }
 
 .ReactCollapse--collapse {
   transition: height 500ms;
