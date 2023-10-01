@@ -3,9 +3,10 @@ import baseAxiosMethod from "./baseAxiosMethod";
 const axiosBaseQuery =
   (
     { baseUrl } = {
-      baseUrl: process.env.REACT_APP_PUBLIC_BASE_URL,
+      baseUrl: "https://tma-be-dev.onrender.com/api/v1",
     }
-  ) => async ({ url, method, data }) => {
+  ) =>
+  async ({ url, method, data }) => {
     const combinedUrl = `${baseUrl}${url}`;
 
     try {
@@ -38,8 +39,8 @@ const axiosBaseQuery =
       const err = axiosError;
       return {
         error: {
-          status: err.response?.status,
-          data: err.response?.data || err.message,
+          status: err.response?.status || err.response?.error_code,
+          data: err.response?.data?.message || err.message,
         },
       };
     }
