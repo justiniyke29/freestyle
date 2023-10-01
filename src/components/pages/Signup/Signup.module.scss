@@ -1,0 +1,12 @@
+.container {
+    @apply w-full  overflow-hidden bg-[#FFFFFF];
+}
+.wrapper {
+    @apply flex;
+}
+.left_container {
+    @apply m-auto mt-16 content-center items-center justify-center lg:mt-auto
+}
+.left_wrapper {
+    @apply m-auto mt-8 items-center justify-center px-3 lg:mt-4;
+}
