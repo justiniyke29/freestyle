@@ -35,7 +35,7 @@ const useErrorHandler = ({
     if (isError) {
       if (error?.data?.statusCode === 499) {
         dispatch(logout());
-        navigate.push("/login");
+        navigate("/login");
       }
     }
   }, [isError]);

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./Header.module.scss";
 import { Button } from "@/components/ui/button";
@@ -13,7 +14,10 @@ const Header = () => {
           important and identifying any bottlenecks or hurdle that may arise
         </p>
         <div className={styles.button_container}>
-          <Button className="bg-[#9f91f3]">Get Started Now</Button>
+          <Button className="bg-[#9f91f3]">
+            {" "}
+            <Link to="/signup">Get Started Now</Link>
+          </Button>
           <Button variant="outline" className="bg-[#fef1cf]">
             See how it works
           </Button>
