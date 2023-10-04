@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { BsCalendar2Event, BsClock, BsSearch } from "react-icons/bs";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
