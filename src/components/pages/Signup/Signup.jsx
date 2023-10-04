@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Signup.module.scss";
 import Input from "@/components/lib/Input/Input";
-import { Button } from "@/components/ui/button";
+import Button from "@/components/lib/button";
 import { validateRegisterInputs } from "@/hooks/validators";
 import usePasswordChecker from "@/hooks/usePasswordChecker";
 import useSuccessHandler from "../../../hooks/useSuccessHandler";
@@ -32,7 +32,7 @@ const Signup = () => {
       //   dispatch(setUserData(data?.data));
       // dispatch(setUserToken(data.token));
       console.log(data);
-      //   navigate.push("/");
+      navigate("/");
     },
     toastMessage: "Account created successfully!",
   });
@@ -134,39 +134,37 @@ const Signup = () => {
                 onChange={handleChange}
               />
               <div className="flex flex-col  text-sm">
-                <p
-                  className={`${
-                    validLength ? "text-green-400" : "text-red-500"
-                  }`}
-                >
-                  Must be more than 8 letters
-                </p>
-                <p
-                  className={`${lowerCase ? "text-green-400" : "text-red-500"}`}
-                >
-                  Must have lowercase
-                </p>
-                <p
-                  className={`${upperCase ? "text-green-400" : "text-red-500"}`}
-                >
-                  Must have uppercase
-                </p>
-                <p
-                  className={`${hasNumber ? "text-green-400" : "text-red-500"}`}
-                >
-                  Must contain a numeric
-                </p>
-                <p
-                  className={`${
-                    specialChar ? "text-green-400" : "text-red-500"
-                  }`}
-                >
-                  Must contain a special character
-                </p>
+                {validLength ? (
+                  <p></p>
+                ) : (
+                  <p className="text-red-500">Must be more than 8 letters</p>
+                )}
+                {lowerCase ? (
+                  <p></p>
+                ) : (
+                  <p className="text-red-500">Must have lowercase</p>
+                )}
+                {upperCase ? (
+                  <p></p>
+                ) : (
+                  <p className="text-red-500">Must have uppercase</p>
+                )}
+                {hasNumber ? (
+                  <p></p>
+                ) : (
+                  <p className="text-red-500">Must contain a numeric</p>
+                )}
+                {specialChar ? (
+                  <p></p>
+                ) : (
+                  <p className="text-red-500">
+                    Must contain a special character
+                  </p>
+                )}
               </div>
               <Button
                 onClick={handleSubmit}
-                // loading={isLoading}
+                loading={isLoading}
                 disabled={!isFormValid}
                 className="w-full rounded-3xl bg-[#0A83FF] text-[16px]"
               >
